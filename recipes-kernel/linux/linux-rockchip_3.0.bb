@@ -10,7 +10,6 @@ SRCREV = "${AUTOREV}"
 PV = "3.0.36"
 DEPENDS = "prebuilt-gcc-linaro"
 COMPATIBLE_MACHINE = "(radxarock)"
-KBUILD_DEFCONFIG = "radxa_rock_linux_defconfig"
 # kernel 3.0.x does not have devicetree
 KERNEL_DEVICETREE = ""
 
