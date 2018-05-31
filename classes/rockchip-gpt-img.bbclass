@@ -42,6 +42,9 @@ LOADER2_SIZE = "8192"
 ATF_SIZE = "8192"
 BOOT_SIZE = "229376"
 
+# Add an extra 100MB to the root parition
+EXTRA_ROOTFS_SIZE = "104857600"
+
 # WORKROUND: miss recipeinfo
 do_image_rockchip_gpt_img[depends] += " \
 	rk-binary-loader:do_populate_lic \
@@ -60,8 +63,7 @@ do_image_rockchip_gpt_img[depends] += " \
 
 PER_CHIP_IMG_GENERATION_COMMAND_rk3036 = "generate_loader1_image"
 PER_CHIP_IMG_GENERATION_COMMAND_rk3288 = "generate_loader1_image"
-PER_CHIP_IMG_GENERATION_COMMAND_rk3328 = "generate_aarch64_loader_image"
-PER_CHIP_IMG_GENERATION_COMMAND_rk3399 = "generate_aarch64_loader_image"
+PER_CHIP_IMG_GENERATION_COMMAND_aarch64 = "generate_aarch64_loader_image"
 
 IMAGE_CMD_rockchip-gpt-img () {
 	# Change to image directory
@@ -88,7 +90,7 @@ create_rk_image () {
 	# will cause corruption error for GPT
 	IMG_ROOTFS_SIZE=$(stat -L --format="%s" ${IMG_ROOTFS})
 
-	GPTIMG_MIN_SIZE=$(expr $IMG_ROOTFS_SIZE + \( ${LOADER1_SIZE} + ${RESERVED1_SIZE} + ${RESERVED2_SIZE} + ${LOADER2_SIZE} + ${ATF_SIZE} + ${BOOT_SIZE} + 35 \) \* 512 )
+	GPTIMG_MIN_SIZE=$(expr $IMG_ROOTFS_SIZE + ${EXTRA_ROOTFS_SIZE} + \( ${LOADER1_SIZE} + ${RESERVED1_SIZE} + ${RESERVED2_SIZE} + ${LOADER2_SIZE} + ${ATF_SIZE} + ${BOOT_SIZE} + 35 \) \* 512 )
 
 	GPT_IMAGE_SIZE=$(expr $GPTIMG_MIN_SIZE \/ 1024 \/ 1024 + 2)
 
