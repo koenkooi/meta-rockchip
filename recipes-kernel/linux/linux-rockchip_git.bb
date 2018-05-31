@@ -66,6 +66,7 @@ SRC_URI += " \
              file://nfs.fragment \
              file://unwinder.fragment \
              file://mali.fragment \
+             file://rockchip.fragment \
             "
 
 KERNEL_CONFIG_FRAGMENTS_append = " \
@@ -78,4 +79,5 @@ KERNEL_CONFIG_FRAGMENTS_append = " \
                                   ${WORKDIR}/systemd.fragment \
                                   ${WORKDIR}/unwinder.fragment \
                                   ${WORKDIR}/mali.fragment \
+                                  ${WORKDIR}/rockchip.fragment \
                                  "
