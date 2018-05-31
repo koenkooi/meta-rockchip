@@ -11,8 +11,8 @@ IMG_ROOTFS = "${IMGDEPLOYDIR}/${IMAGE_LINK_NAME}.${IMG_ROOTFS_TYPE}"
 # This image depends on the rootfs image
 IMAGE_TYPEDEP_rockchip-gpt-img = "${IMG_ROOTFS_TYPE}"
 
-GPTIMG = "${IMAGE_BASENAME}-${MACHINE}-gpt.img"
-BOOT_IMG = "${IMAGE_BASENAME}-${MACHINE}-boot.img"
+GPTIMG = "${IMAGE_NAME}-gpt.img"
+BOOT_IMG = "${IMAGE_NAME}-${MACHINE}-boot.img"
 IDBLOADER = "idbloader.img"
 
 # Get From rk-binary loader
