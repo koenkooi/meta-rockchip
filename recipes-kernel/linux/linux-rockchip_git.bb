@@ -55,6 +55,16 @@ SRC_URI += " \
              file://0030-drm-lima-refine-lima_gem_sync_bo.patch \
              file://0031-drm-lima-vm-will-be-freed-when-lima_sched_free_job.patch \
              \
+             file://0001-drm-bridge-dw-hdmi-allow-forcing-vendor-phy-type.patch \
+             file://0002-drm-rockchip-dw_hdmi-Allow-outputs-that-don-t-need-o.patch \
+             file://0003-dt-bindings-allow-optional-phys-in-Rockchip-dw_hdmi-.patch \
+             file://0004-drm-rockchip-dw_hdmi-allow-including-external-phys.patch \
+             file://0005-drm-rockchip-dw_hdmi-store-rockchip_hdmi-reference-i.patch \
+             file://0006-drm-rockchip-dw_hdmi-add-dw-hdmi-support-for-the-rk3.patch \
+             file://0007-arm64-dts-rockchip-add-Innosilicon-hdmi-phy-node-to-.patch \
+             file://0008-arm64-dts-rockchip-add-rk3328-display-nodes.patch \
+             file://0009-arm64-dts-rockchip-enable-display-nodes-on-rk3328-ro.patch \
+             \
              file://defconfig \
              file://bbr.fragment \
              file://iosched.fragment \

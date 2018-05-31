@@ -1,0 +1,55 @@
+From 751f8ca271d66b8d638fe9fd485c6cd474aa8b91 Mon Sep 17 00:00:00 2001
+From: Heiko Stuebner <heiko@sntech.de>
+Date: Tue, 15 May 2018 15:47:35 +0200
+Subject: [PATCH 5/9] drm/rockchip: dw_hdmi: store rockchip_hdmi reference in
+ phy_data object
+
+When using special phy handling operations we'll often need access to
+the rockchip_hdmi struct.
+
+As the chip-data that occupies the phy_data pointer initially gets
+assigned to the rockchip_hdmi struct, we can now re-use this phy_data
+pointer to hold the reference to the rockchip_hdmi struct and use this
+reference later on.
+
+Inspiration for this comes from meson and sunxi dw-hdmi, which are using
+the same method.
+
+Signed-off-by: Heiko Stuebner <heiko@sntech.de>
+Tested-by: Robin Murphy <robin.murphy@arm.com>
+---
+ drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c b/drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c
+index 57e76df..19f002f 100644
+--- a/drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c
++++ b/drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c
+@@ -335,7 +335,7 @@ static int dw_hdmi_rockchip_bind(struct device *dev, struct device *master,
+ 				 void *data)
+ {
+ 	struct platform_device *pdev = to_platform_device(dev);
+-	const struct dw_hdmi_plat_data *plat_data;
++	struct dw_hdmi_plat_data *plat_data;
+ 	const struct of_device_id *match;
+ 	struct drm_device *drm = data;
+ 	struct drm_encoder *encoder;
+@@ -350,9 +350,14 @@ static int dw_hdmi_rockchip_bind(struct device *dev, struct device *master,
+ 		return -ENOMEM;
+ 
+ 	match = of_match_node(dw_hdmi_rockchip_dt_ids, pdev->dev.of_node);
+-	plat_data = match->data;
++	plat_data = devm_kmemdup(&pdev->dev, match->data,
++					     sizeof(*plat_data), GFP_KERNEL);
++	if (!plat_data)
++		return -ENOMEM;
++
+ 	hdmi->dev = &pdev->dev;
+ 	hdmi->chip_data = plat_data->phy_data;
++	plat_data->phy_data = hdmi;
+ 	encoder = &hdmi->encoder;
+ 
+ 	encoder->possible_crtcs = drm_of_find_possible_crtcs(drm, dev->of_node);
+-- 
+2.9.5
+
