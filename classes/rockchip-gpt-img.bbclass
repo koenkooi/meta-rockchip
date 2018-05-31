@@ -115,9 +115,9 @@ create_rk_image () {
 
 	# Create extlinux config file
 	cat > ${WORKDIR}/extlinux.conf <<EOF
-default yocto
+default OpenEmbedded
 
-label yocto
+label OpenEmbedded
 	kernel /${KERNEL_IMAGETYPE}
 	devicetree /${DEVICETREE_DEFAULT}
 	append ${GPTIMG_APPEND}
