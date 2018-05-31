@@ -1,13 +1,15 @@
-From 699144f64ee501867e79bec66ae4e32ff233f075 Mon Sep 17 00:00:00 2001
+From eefe9b789b035ed868b224c13e7088cc7fbfafec Mon Sep 17 00:00:00 2001
 From: Heiko Stuebner <heiko@sntech.de>
 Date: Tue, 15 May 2018 15:54:55 +0200
-Subject: [PATCH 8/9] arm64: dts: rockchip: add rk3328 display nodes
+Subject: [PATCH 08/11] arm64: dts: rockchip: add rk3328 display nodes
 
 Add the chain of display nodes from the core display-subsystem
 through the one vop to the dw-hdmi output.
 
 Signed-off-by: Heiko Stuebner <heiko@sntech.de>
 Tested-by: Robin Murphy <robin.murphy@arm.com>
+
+%% original patch: 0008-arm64-dts-rockchip-add-rk3328-display-nodes.patch
 ---
  arch/arm64/boot/dts/rockchip/rk3328.dtsi | 56 ++++++++++++++++++++++++++++++++
  1 file changed, 56 insertions(+)

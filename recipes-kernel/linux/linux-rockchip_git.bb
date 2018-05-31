@@ -64,6 +64,9 @@ SRC_URI += " \
              file://0007-arm64-dts-rockchip-add-Innosilicon-hdmi-phy-node-to-.patch \
              file://0008-arm64-dts-rockchip-add-rk3328-display-nodes.patch \
              file://0009-arm64-dts-rockchip-enable-display-nodes-on-rk3328-ro.patch \
+             file://0010-drm-rockchip-vop-split-out-core-clock-enablement-int.patch \
+             file://0011-drm-rockchip-vop-fix-irq-disabled-after-vop-driver-p.patch \
+             file://0012-phy-add-Rockchip-Innosilicon-hdmi-phy.patch \
              \
              file://defconfig \
              file://bbr.fragment \

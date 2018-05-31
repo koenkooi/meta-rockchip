@@ -1,7 +1,7 @@
-From 4f341b86b5996ab6ff46444b9730fb2b94212457 Mon Sep 17 00:00:00 2001
+From 8564ebac2ac08ca5e2802d1f90838d157b20670b Mon Sep 17 00:00:00 2001
 From: Heiko Stuebner <heiko@sntech.de>
 Date: Tue, 15 May 2018 15:47:33 +0200
-Subject: [PATCH 3/9] dt-bindings: allow optional phys in Rockchip dw_hdmi
+Subject: [PATCH 03/11] dt-bindings: allow optional phys in Rockchip dw_hdmi
  binding
 
 Some newer Rockchip SoCs use an Innosilicon hdmiphy accessed via general
@@ -10,6 +10,8 @@ and therefore add optional phy-related properties to the binding.
 
 Signed-off-by: Heiko Stuebner <heiko@sntech.de>
 Reviewed-by: Rob Herring <robh@kernel.org>
+
+%% original patch: 0003-dt-bindings-allow-optional-phys-in-Rockchip-dw_hdmi-.patch
 ---
  Documentation/devicetree/bindings/display/rockchip/dw_hdmi-rockchip.txt | 2 ++
  1 file changed, 2 insertions(+)

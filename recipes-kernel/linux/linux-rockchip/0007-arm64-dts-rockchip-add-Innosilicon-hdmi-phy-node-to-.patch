@@ -1,7 +1,7 @@
-From c37048b0082c90ef793421be55f696dc769a9be1 Mon Sep 17 00:00:00 2001
+From 6d836714f44ee780fb5e84311abf244ee4ac0845 Mon Sep 17 00:00:00 2001
 From: Heiko Stuebner <heiko@sntech.de>
 Date: Tue, 15 May 2018 15:54:54 +0200
-Subject: [PATCH 7/9] arm64: dts: rockchip: add Innosilicon hdmi phy node to
+Subject: [PATCH 07/11] arm64: dts: rockchip: add Innosilicon hdmi phy node to
  rk3328
 
 The rk3328 uses a hdmiphy from Innosilicon, so add the necessary node
@@ -9,6 +9,8 @@ to the rk3328 soc devicetree.
 
 Signed-off-by: Heiko Stuebner <heiko@sntech.de>
 Tested-by: Robin Murphy <robin.murphy@arm.com>
+
+%% original patch: 0007-arm64-dts-rockchip-add-Innosilicon-hdmi-phy-node-to-.patch
 ---
  arch/arm64/boot/dts/rockchip/rk3328.dtsi | 14 ++++++++++++++
  1 file changed, 14 insertions(+)

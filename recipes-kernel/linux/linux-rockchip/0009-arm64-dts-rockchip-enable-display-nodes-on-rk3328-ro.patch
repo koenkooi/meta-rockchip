@@ -1,9 +1,10 @@
-From 875d68cd79c2579095ce5563a4778429a45973d4 Mon Sep 17 00:00:00 2001
+From a58900d8c2202eafa964a73ed5ed649d699339c1 Mon Sep 17 00:00:00 2001
 From: Heiko Stuebner <heiko@sntech.de>
 Date: Thu, 31 May 2018 19:16:39 +0200
-Subject: [PATCH 9/9] arm64: dts: rockchip: enable display nodes on
+Subject: [PATCH 09/11] arm64: dts: rockchip: enable display nodes on
  rk3328-rock64login
 
+%% original patch: 0009-arm64-dts-rockchip-enable-display-nodes-on-rk3328-ro.patch
 ---
  arch/arm64/boot/dts/rockchip/rk3328-rock64.dts | 16 ++++++++++++++++
  1 file changed, 16 insertions(+)

@@ -1,7 +1,7 @@
-From 751f8ca271d66b8d638fe9fd485c6cd474aa8b91 Mon Sep 17 00:00:00 2001
+From 43edf82829674f446df1842de74280f40324d2f8 Mon Sep 17 00:00:00 2001
 From: Heiko Stuebner <heiko@sntech.de>
 Date: Tue, 15 May 2018 15:47:35 +0200
-Subject: [PATCH 5/9] drm/rockchip: dw_hdmi: store rockchip_hdmi reference in
+Subject: [PATCH 05/11] drm/rockchip: dw_hdmi: store rockchip_hdmi reference in
  phy_data object
 
 When using special phy handling operations we'll often need access to
@@ -17,6 +17,8 @@ the same method.
 
 Signed-off-by: Heiko Stuebner <heiko@sntech.de>
 Tested-by: Robin Murphy <robin.murphy@arm.com>
+
+%% original patch: 0005-drm-rockchip-dw_hdmi-store-rockchip_hdmi-reference-i.patch
 ---
  drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c | 9 +++++++--
  1 file changed, 7 insertions(+), 2 deletions(-)

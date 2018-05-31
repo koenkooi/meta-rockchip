@@ -1,7 +1,7 @@
-From 4e0637fa728a039554ded7b2dc2dd28541d743ed Mon Sep 17 00:00:00 2001
+From fea38a18cf6207eecc1949ef38689f9379b2bcc2 Mon Sep 17 00:00:00 2001
 From: Heiko Stuebner <heiko@sntech.de>
 Date: Tue, 15 May 2018 15:47:32 +0200
-Subject: [PATCH 2/9] drm/rockchip: dw_hdmi: Allow outputs that don't need
+Subject: [PATCH 02/11] drm/rockchip: dw_hdmi: Allow outputs that don't need
  output switching
 
 So far we always encountered socs with 2 output crtcs needing the driver
@@ -13,6 +13,8 @@ that no output-switching is necessary.
 
 Signed-off-by: Heiko Stuebner <heiko@sntech.de>
 Tested-by: Robin Murphy <robin.murphy@arm.com>
+
+%% original patch: 0002-drm-rockchip-dw_hdmi-Allow-outputs-that-don-t-need-o.patch
 ---
  drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c | 5 ++++-
  1 file changed, 4 insertions(+), 1 deletion(-)

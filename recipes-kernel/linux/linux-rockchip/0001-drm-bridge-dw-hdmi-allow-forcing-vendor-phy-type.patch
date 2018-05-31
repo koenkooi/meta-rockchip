@@ -1,7 +1,7 @@
-From 33efe2ff2f00505efc7b1cf37c0be53cf9caaf04 Mon Sep 17 00:00:00 2001
+From e9e41052dfe2fd812f0baf659eb9b6619036c745 Mon Sep 17 00:00:00 2001
 From: Heiko Stuebner <heiko@sntech.de>
 Date: Tue, 15 May 2018 15:47:31 +0200
-Subject: [PATCH 1/9] drm/bridge: dw-hdmi: allow forcing vendor phy-type
+Subject: [PATCH 01/11] drm/bridge: dw-hdmi: allow forcing vendor phy-type
 
 In some IP implementations the reading of the phy-type may be broken.
 One example are the Rockchip rk3228 and rk3328 socs that use a separate
@@ -13,6 +13,8 @@ for now we'll keep it simply to the case actually seen in the wild.
 
 Signed-off-by: Heiko Stuebner <heiko@sntech.de>
 Tested-by: Robin Murphy <robin.murphy@arm.com>
+
+%% original patch: 0001-drm-bridge-dw-hdmi-allow-forcing-vendor-phy-type.patch
 ---
  drivers/gpu/drm/bridge/synopsys/dw-hdmi.c | 4 +++-
  include/drm/bridge/dw_hdmi.h              | 1 +

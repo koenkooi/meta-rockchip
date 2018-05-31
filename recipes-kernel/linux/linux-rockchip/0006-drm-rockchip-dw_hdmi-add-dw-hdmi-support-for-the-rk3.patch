@@ -1,7 +1,8 @@
-From c568725635f9f770267e8382308fef0f9bdec6a2 Mon Sep 17 00:00:00 2001
+From ca7b8b29a3b1164d0a1215bf7dadbb738f2583e8 Mon Sep 17 00:00:00 2001
 From: Heiko Stuebner <heiko@sntech.de>
 Date: Tue, 15 May 2018 15:47:36 +0200
-Subject: [PATCH 6/9] drm/rockchip: dw_hdmi: add dw-hdmi support for the rk3328
+Subject: [PATCH 06/11] drm/rockchip: dw_hdmi: add dw-hdmi support for the
+ rk3328
 
 The rk3328 uses a dw-hdmi controller with an external hdmi phy from
 Innosilicon which uses the generic phy framework for access.
@@ -11,6 +12,8 @@ rockchip dw-hdmi driver.
 Signed-off-by: Heiko Stuebner <heiko@sntech.de>
 Tested-by: Robin Murphy <robin.murphy@arm.com>
 Acked-by: Rob Herring <robh@kernel.org>
+
+%% original patch: 0006-drm-rockchip-dw_hdmi-add-dw-hdmi-support-for-the-rk3.patch
 ---
  .../bindings/display/rockchip/dw_hdmi-rockchip.txt |   1 +
  drivers/gpu/drm/rockchip/dw_hdmi-rockchip.c        | 106 +++++++++++++++++++++
