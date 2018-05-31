@@ -7,7 +7,7 @@ require conf/machine/include/rockchip-defaults.inc
 KERNEL_IMAGETYPE = "Image"
 SERIAL_CONSOLES = "115200;ttyS2"
 
-PREFERRED_PROVIDER_virtual/bootloader ?= "u-boot-rockchip"
+PREFERRED_PROVIDER_virtual/bootloader ?= "u-boot-rock64"
 SPL_BINARY ?= "u-boot-spl-dtb.bin"
 
 IMAGE_FSTYPES = "rockchip-gpt-img"
