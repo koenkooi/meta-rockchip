@@ -68,6 +68,10 @@ SRC_URI += " \
              file://0011-drm-rockchip-vop-fix-irq-disabled-after-vop-driver-p.patch \
              file://0012-phy-add-Rockchip-Innosilicon-hdmi-phy.patch \
              \
+             file://0001-arm64-dts-rockchip-add-spi-nor-flash-node-on-rk3328-.patch \
+             file://0002-arm64-dts-rockchip-add-leds-node-on-rk3328-rock64.patch \
+             file://0003-arm64-dts-rockchip-fix-emmc-node-on-rk3328-rock64.patch \
+             \
              file://defconfig \
              file://bbr.fragment \
              file://iosched.fragment \
