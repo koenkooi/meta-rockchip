@@ -13,13 +13,11 @@ S = "${WORKDIR}/git"
 
 
 PV = "4.17"
-# Since it's actally 4.17-rcsomething skip the version check
 KERNEL_VERSION_SANITY_SKIP="1"
 
 
-#SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;protocol=https;branch=linux-4.17.y"
-SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git;protocol=https;branch=master"
-SRCREV_pn-${PN} = "88a867653065dc14b0fdeeb626efb8d7ebe39be5"
+SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;protocol=https;branch=linux-4.17.y"
+SRCREV_pn-${PN} = "29dcea88779c856c7dc92040a0c01233263101d4"
 
 # defconfig and config fragments
 SRC_URI += " \
@@ -71,6 +69,8 @@ SRC_URI += " \
              file://0001-arm64-dts-rockchip-add-spi-nor-flash-node-on-rk3328-.patch \
              file://0002-arm64-dts-rockchip-add-leds-node-on-rk3328-rock64.patch \
              file://0003-arm64-dts-rockchip-fix-emmc-node-on-rk3328-rock64.patch \
+             file://0004-soc-rockchip-power-domain-Fix-wrong-value-when-power.patch \
+             file://0005-arm64-dts-rockchip-add-clocks-in-iommu-nodes.patch \
              \
              file://defconfig \
              file://bbr.fragment \

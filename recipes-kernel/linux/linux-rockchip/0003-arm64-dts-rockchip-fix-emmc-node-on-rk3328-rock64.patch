@@ -1,8 +1,9 @@
-From 3d03b5d7ba1ab1cc5fc23aad42c40602bf8ca101 Mon Sep 17 00:00:00 2001
+From 03f12f16a07f1fd547b3b371d054795c7bdfa55e Mon Sep 17 00:00:00 2001
 From: Jonas Karlman <jonas@kwiboo.se>
 Date: Sun, 25 Mar 2018 17:47:25 +0200
-Subject: [PATCH 3/3] arm64: dts: rockchip: fix emmc node on rk3328-rock64
+Subject: [PATCH 3/5] arm64: dts: rockchip: fix emmc node on rk3328-rock64
 
+%% original patch: 0003-arm64-dts-rockchip-fix-emmc-node-on-rk3328-rock64.patch
 ---
  arch/arm64/boot/dts/rockchip/rk3328-rock64.dts | 1 +
  1 file changed, 1 insertion(+)
@@ -20,5 +21,5 @@ index 7eba67c..aa01a15 100644
  	pinctrl-names = "default";
  	pinctrl-0 = <&emmc_clk &emmc_cmd &emmc_bus8>;
 -- 
-2.9.5
+2.0.1
 

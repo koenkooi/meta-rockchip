@@ -1,8 +1,9 @@
-From 9f8cbc3bfd4ccf922d5675666c1683548639b25c Mon Sep 17 00:00:00 2001
+From 24c6877913f2bc142058bf9c244c9d26382d13d0 Mon Sep 17 00:00:00 2001
 From: Jonas Karlman <jonas@kwiboo.se>
 Date: Sun, 25 Mar 2018 17:47:25 +0200
-Subject: [PATCH 2/3] arm64: dts: rockchip: add leds node on rk3328-rock64
+Subject: [PATCH 2/5] arm64: dts: rockchip: add leds node on rk3328-rock64
 
+%% original patch: 0002-arm64-dts-rockchip-add-leds-node-on-rk3328-rock64.patch
 ---
  arch/arm64/boot/dts/rockchip/rk3328-rock64.dts | 16 ++++++++++++++++
  1 file changed, 16 insertions(+)
@@ -42,5 +43,5 @@ index cd1b61b..7eba67c 100644
  		pinctrl-0 = <&pmic_int_l>;
  		rockchip,system-power-controller;
 -- 
-2.9.5
+2.0.1
 
