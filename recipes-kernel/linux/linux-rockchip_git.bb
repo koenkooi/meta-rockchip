@@ -71,7 +71,9 @@ SRC_URI += " \
              file://0003-arm64-dts-rockchip-fix-emmc-node-on-rk3328-rock64.patch \
              file://0004-soc-rockchip-power-domain-Fix-wrong-value-when-power.patch \
              file://0005-arm64-dts-rockchip-add-clocks-in-iommu-nodes.patch \
-             \
+             file://0006-arm64-dts-rockchip-add-usb3-controller-node-for-RK33.patch \
+             file://0007-arm64-dts-rockchip-enable-usb3-nodes-on-rk3328-rock6.patch \
+             \\
              file://defconfig \
              file://bbr.fragment \
              file://iosched.fragment \
